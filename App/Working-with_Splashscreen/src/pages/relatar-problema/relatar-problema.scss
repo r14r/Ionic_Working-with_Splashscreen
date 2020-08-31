@@ -1,0 +1,49 @@
+page-relatar-problema {
+    ion-textarea{
+        
+        border-style:solid;
+        box-shadow: none !important;
+        margin-bottom: 3%;
+        //border-color: #057091;
+        border-color: #d6d2d2;
+        border-radius:0.5cm;
+        background-color: rgb(242, 247, 245);
+        box-shadow: transparent;
+    }
+    ion-select{
+        
+        max-width:100% !important;
+        border-style:solid;
+        //border-color: #057091;
+        border-color: #d6d2d2;
+        border-radius:0.5cm;
+        background-color: rgb(242, 247, 245);
+    }
+    
+    //ion-card {
+        //position: relative; 
+        //padding: 1%;
+    //}
+    
+    .label{
+        font-size: 12px;
+    }
+    .bg-img {
+        //width: 300px;
+        //height: 300px;
+        width: 90%;
+        height: 60%;
+        object-fit: cover;
+        object-position: center;
+
+        display: block;
+        margin: auto;
+        border-color: #d6d2d2;
+        border-radius:0.2cm;
+        align-content: center;
+        background-color: rgb(231, 235, 234);
+        
+    }
+    
+    
+}

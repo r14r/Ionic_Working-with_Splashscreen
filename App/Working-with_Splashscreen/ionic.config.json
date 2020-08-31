@@ -1,0 +1,8 @@
+{
+  "name": "Relatai",
+  "app_id": "br.com.relatai",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}

@@ -1,0 +1,34 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Relatar Problemas</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding-top>
+
+  <ion-list>
+    <ion-item>
+      <ion-select [(ngModel)]="categoria" interface="popover" placeholder="Escolha uma categoria">
+        <ion-option *ngFor="let dado of dados" value= {{dado.id}} >{{dado.nome}}</ion-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+  <ion-item>
+    <ion-textarea [(ngModel)]="descricao" placeholder="Descreva o problema"></ion-textarea>
+  </ion-item>
+
+    <img class="bg-img" src="{{imgFoto}}" />
+
+  <ion-fab right bottom>
+      <button ion-fab color="primary"><ion-icon name="arrow-dropup"></ion-icon></button>
+      <ion-fab-list side="top">
+        <button ion-fab (click)="abreCamera()"><ion-icon name="md-camera"></ion-icon></button>
+      </ion-fab-list>
+      <ion-fab-list side="left">
+        <button ion-button round (click)="checaIdentificacao()"><ion-icon class="label" name="ios-pin-outline"><br/>Relatai</ion-icon></button>
+      </ion-fab-list>
+    </ion-fab>
+
+</ion-content>

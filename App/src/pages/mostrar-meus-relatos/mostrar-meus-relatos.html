@@ -1,0 +1,38 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Meus Relatos</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+
+  <ion-list *ngFor="let meuRelato of meusRelatos">
+    <ion-item-sliding (ionSwipe)="delete(item)">
+      <ion-item>
+        <ion-thumbnail item-start>
+          <img src={{meuRelato.foto}}>
+        </ion-thumbnail>
+        <h2>{{meuRelato.descricao}}</h2>
+        <h4>Dia {{meuRelato.dataPublicacao}} às {{meuRelato.horaPublicacao}}</h4>
+        <p>
+          <ion-icon name="thumbs-up"></ion-icon>
+          {{meuRelato.confirmado}} &nbsp;&nbsp;
+          <ion-icon name="thumbs-down"></ion-icon>
+          {{meuRelato.denunciado}}</p>
+        <!--<button ion-button clear item-end>Ver</button>-->
+        <ion-icon name="ios-arrow-dropright-outline" item-end></ion-icon>
+      </ion-item>
+      <ion-item-options side="left">
+        <button ion-button expandable (click)="delete(meuRelato)" color="primary">
+          <ion-icon name="trash"></ion-icon></button>
+      </ion-item-options>
+      <ion-item-options side="right">
+        <button ion-button expandable (click)="delete(meuRelato)" color="primary">
+          <ion-icon name="trash"></ion-icon></button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+
+</ion-content>
